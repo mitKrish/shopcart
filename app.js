@@ -40,12 +40,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 //app.use(cors());
 
 app.use(passport.initialize());
-app.use('/', routesApi);
+app.use('/api', routesApi);
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+/*app.use(function(req, res, next) {
   next(createError(404));
 });
+*/
 
 //Unauthorized errors
 app.use(function(err, req, res, next) {
